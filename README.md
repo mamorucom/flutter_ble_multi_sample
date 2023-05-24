@@ -1,0 +1,2 @@
+# flutter_ble_multi_sample
+flutter_blue_plusを使って複数台接続を実現したサンプル
