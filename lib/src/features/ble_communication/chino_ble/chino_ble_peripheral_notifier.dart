@@ -7,6 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'chino_ble_peripheral.dart';
 import 'chino_device.dart';
 
+//? provider.familyで機器名称ごとにproviderを生成して管理しています。
 final chinoBlePeripheralProvider = StateNotifierProvider.autoDispose
     .family<ChinoBlePeripheralNotifier, AsyncValue<ChinoBlePeripheral>, String>(
   (ref, name) {
@@ -14,6 +15,7 @@ final chinoBlePeripheralProvider = StateNotifierProvider.autoDispose
   },
 );
 
+//? ここは接続/切断以外は機器に依存しまくりなので参考まで。
 class ChinoBlePeripheralNotifier
     extends StateNotifier<AsyncValue<ChinoBlePeripheral>> {
   ChinoBlePeripheralNotifier(

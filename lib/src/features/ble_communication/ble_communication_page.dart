@@ -9,7 +9,15 @@ class BleCommunicationPage extends HookConsumerWidget {
       appBar: AppBar(
         title: const Text('BLE複数台接続'),
       ),
-      body: Container(),
+      body: const _BleCommunicationBody(),
     );
+  }
+}
+
+class _BleCommunicationBody extends HookConsumerWidget {
+  const _BleCommunicationBody();
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Container();
   }
 }

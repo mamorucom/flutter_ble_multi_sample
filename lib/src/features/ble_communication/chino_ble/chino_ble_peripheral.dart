@@ -14,6 +14,8 @@ part 'chino_ble_peripheral.freezed.dart';
 class ChinoBlePeripheral with _$ChinoBlePeripheral {
   factory ChinoBlePeripheral({
     /// [BluetoothDevice] is used to connect to BLE device.
+    //? 結局こいつを使って接続&通信することになるので、こいつのinstanceを数分持てば
+    //? 複数台接続&通信は実現できましたね。(なぜ気づかなかったのか...)
     BluetoothDevice? bleDevice,
 
     /// [ChinoDevice] communicates with BLE device and stores measurement

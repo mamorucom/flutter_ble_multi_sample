@@ -4,3 +4,8 @@ flutter_blue_plusを使って複数台接続を実現したサンプル
 ## BLE通信機器参考
 
 https://www.chino.co.jp/products/loggers/mf500b/
+
+## コメント
+
+- `//?` で検索してもらうと、解説および検討事項など記載しています。
+- 
