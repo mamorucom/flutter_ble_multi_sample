@@ -130,6 +130,14 @@ flutter_riverpod
 2.17
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/flutter_riverpod-2.3.6/
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/flutter_riverpod-2.3.6/lib/
+freezed
+2.17
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/freezed-2.3.4/
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/freezed-2.3.4/lib/
+freezed_annotation
+2.17
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/freezed_annotation-2.2.0/
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/freezed_annotation-2.2.0/lib/
 frontend_server_client
 2.12
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/frontend_server_client-3.2.0/
@@ -226,6 +234,10 @@ shelf_web_socket
 2.17
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.4/
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.4/lib/
+source_gen
+2.18
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/source_gen-1.3.2/
+file:///Users/tyamashita/.pub-cache/hosted/pub.dev/source_gen-1.3.2/lib/
 source_span
 2.14
 file:///Users/tyamashita/.pub-cache/hosted/pub.dev/source_span-1.9.1/
