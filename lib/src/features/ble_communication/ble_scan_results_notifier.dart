@@ -40,8 +40,9 @@ final isBleScanningProvider = StreamProvider<bool>((ref) {
 
 //? ここは機器固有の情報ないので使い回しできそうですね。
 class BleScanResultsNotifier extends AsyncNotifier<List<ScanResult>> {
-  BleScanResultsNotifier(this.fiteringNames);
-  final List<String> fiteringNames;
+  BleScanResultsNotifier(this.filteringNames);
+
+  final List<String> filteringNames;
   final FlutterBluePlus flutterBlue = FlutterBluePlus.instance;
 
   Stream<bool> get isScanning => flutterBlue.isScanning;
@@ -102,15 +103,15 @@ class BleScanResultsNotifier extends AsyncNotifier<List<ScanResult>> {
     //? もっと良い絞り込み方あると思います。
     //? local変数indexの気の利いた名前が思いつかず、被ってますすいません。
     for (final ScanResult scanResult in scanResults) {
-      final index = fiteringNames.indexWhere(
-          (fiteringName) => fiteringName.contains(scanResult.device.name));
-      if (index != -1) {
-        final index =
-            state.valueOrNull?.indexWhere((e) => e.device == scanResult.device);
-        state = AsyncValue.data([
-          ...state.valueOrNull ?? [],
-          if (index == -1) scanResult,
-        ]);
+      for (final filteringName in filteringNames) {
+        if (scanResult.device.name.contains(filteringName)) {
+          final index = state.valueOrNull
+              ?.indexWhere((element) => element.device == scanResult.device);
+          state = AsyncValue.data([
+            ...state.valueOrNull ?? [],
+            if (index == -1) scanResult,
+          ]);
+        }
       }
     }
   }
