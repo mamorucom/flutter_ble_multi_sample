@@ -78,11 +78,12 @@ class BleScanResultsNotifier extends AsyncNotifier<List<ScanResult>> {
   /// start and check Scanning BLE device.
   ///
   Future<void> startAndCheckScan() async {
-    final isScanning = await flutterBlue.isScanning.first;
-    // スキャン中なら実行しなくてよい。
-    if (isScanning) {
-      return;
-    }
+    //? flutterBlue.isScanningが取得できないので、一旦コメントアウト
+    // final isScanning = await flutterBlue.isScanning.first;
+    // // スキャン中なら実行しなくてよい。
+    // if (isScanning) {
+    //   return;
+    // }
 
     checkScan();
 
@@ -100,8 +101,7 @@ class BleScanResultsNotifier extends AsyncNotifier<List<ScanResult>> {
   /// Restore monitoring scan results filtered by Chino devices.
   ///
   void monitoringScanResults(List<ScanResult> scanResults) {
-    //? もっと良い絞り込み方あると思います。
-    //? local変数indexの気の利いた名前が思いつかず、被ってますすいません。
+    //? もっと良い絞り込み方あるかも
     for (final ScanResult scanResult in scanResults) {
       for (final filteringName in filteringNames) {
         if (scanResult.device.name.contains(filteringName)) {
