@@ -13,6 +13,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:layout/layout.dart';
 
 part 'parts/xs_ble_communication_body.dart';
+part 'parts/xs_chino_peripheral_list_tile.dart';
+part 'parts/xs_chino_peripheral_service_button.dart';
 
 class BleCommunicationPage extends HookConsumerWidget {
   const BleCommunicationPage({super.key});
