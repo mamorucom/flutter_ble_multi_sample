@@ -16,6 +16,3 @@ https://www.chino.co.jp/products/loggers/mf500b/
 
 - `//?` で検索してもらうと、解説および検討事項など記載しています。
 
-
-https://github.com/mamorucom/flutter_ble_multi_sample/assets/65739320/cceca039-82dc-4cbb-bcb4-b31adb9d5cc7
-
